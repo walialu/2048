@@ -1,0 +1,22 @@
+[
+    {
+        "general": {
+            "game_title": "2048",
+            "how_to_text_short": "<strong>How to play:</strong> To move the tiles in one direction use the <strong>arrow keys</strong> (up, down, right, left). If two tiles with the same number collide, they merge into a tile with the sum. The objective is to form a tile with the number <strong>2048</strong>. The game ends when all the fields are covered with tiles.",
+            "label_game_page":"Time",
+			"text_result":"Result",
+			"label_points":"Score",
+			"label_score":"Best",
+            "text_game_end_page":"You win",
+            "text_end_game_lost":"Game Over!",
+            "game_subline":"Join the numbers and get to the <strong>2048</strong> tile!",
+			"buttons": {
+                "button_rules": "Rules",   
+                "button_new_game": "New game",
+                "button_retry": "Try again",
+                "button_end_game": "Keep going"
+            }
+        }
+       
+    }
+]

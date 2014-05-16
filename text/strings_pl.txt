@@ -1,0 +1,21 @@
+[
+    {
+        "general": {
+            "game_title": "2048",
+            "how_to_text_short": "<strong>Jak grać:</strong> aby przesuwać płytki w jednym kierunku użyj <strong>klawiszy ze strzałkami</strong>(do góry, na dół, w lewo i w prawo). Jeśli dwie płytki z tymi samymi cyframi kolidują ze sobą, łączą się w jedną, na której pojawi się suma dwóch płytek. Celem gry jest utworzenie płytki z numerem <strong>2048</strong>. Gra kończy się, kiedy wszystkie pola zapełnią się płytkami.",
+            "label_game_page": "Czas",
+            "text_result": "Wynik",
+            "label_points": "Punkty",
+            "label_score": "Najlepszy wynik",
+            "text_game_end_page": "Wygrywasz!",
+            "text_end_game_lost": "Koniec gry",
+            "game_subline": "Połącz jednakowe, sąsiadujące cyfry i \"wciśnij\" na małą planszę jak najwyższe liczby. <strong>2048</strong> liczby!",
+            "buttons": {
+                "button_rules": "Zasady",
+                "button_new_game": "Nowa gra",
+                "button_retry": "Jeszcze raz",
+                "button_end_game": "Kontrynuuj"
+            }
+        }
+    }
+]

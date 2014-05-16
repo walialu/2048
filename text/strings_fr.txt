@@ -1,0 +1,22 @@
+[
+    {
+        "general": {
+            "game_title": "2048",
+            "how_to_text_short": "<strong>Comment jouer:</strong> Le but de ce casse-tête est d’obtenir 2048 points grâce aux cases numérotées. Dès que vous avez deux cases identiques sur une même ligne ou sur une même colonne (sans aucune case remplie entre elles), fusionnez-les en utilisant les touches flèche (haut, bas, droite, gauche). Leur nombre s’additionne et s’inscrit dans la case. L'objectif est de former une tuile avec le nombre <strong> 2048 </ strong>. Le jeu se termine lorsque tous les champs sont couverts de nombres.",
+            "label_game_page":"Temps",
+			"text_result":"Résultat",
+			"label_points":"Score",
+			"label_score":"Record",
+            "text_game_end_page":"Tu as gagné !",
+            "text_end_game_lost":"Perdu !",
+            "game_subline":"Reliez les nombres et faites apparaître la case <strong> 2048 </strong>!",
+			"buttons": {
+                "button_rules": "Règles",   
+                "button_new_game": "Nouveau jeu",
+                "button_retry": "Essayer encore",
+                "button_end_game": "Continuer"
+            }
+        }
+       
+    }
+]
