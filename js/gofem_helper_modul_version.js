@@ -84,6 +84,7 @@ GofemHelper = (function() {
              $(".score-container").attr('data-content',dataParam[0].general.text_result);
              $(".best-container").attr('data-content',dataParam[0].general.label_score);
              $(".game-intro").html(dataParam[0].general.game_subline);
+             $(".retry-button").html(dataParam[0].general.buttons.button_retry);
             //das erst ausführen wenn die txt bzw. json Datei geladen wurde:
              that.getParams();
             // that.setHTMLOutputWinLose();
