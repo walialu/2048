@@ -1,5 +1,6 @@
 /*Konstruktor
-für OOP siehe auch : http://molily.de/js/organisation-module.html#object-literal*/
+für OOP siehe auch : http://molily.de/js/organisation-module.html#object-literal
+testtest*/
 GofemHelper = (function() {
       //alle öffentlichen Methoden und Variablen kommen hier rein und werden später zurückgegeben:
       var pub ={};
