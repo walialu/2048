@@ -13,7 +13,6 @@ function GameManager(size, InputManager, Actuator, StorageManager) {
   this.inputManager.on("keepPlaying", this.keepPlaying.bind(this));
 
   this.setParameters();
-
 }
 
 // Restart the game
@@ -25,7 +24,7 @@ GameManager.prototype.setParameters = function () {
 
 // Restart the game
 GameManager.prototype.restart = function () {
-  GofemHelper.tagging();
+  //GofemHelper.tagging();
   this.storageManager.clearGameState();
   this.actuator.continueGame(); // Clear the game won/lost message
   this.setup();

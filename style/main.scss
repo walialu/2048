@@ -1,7 +1,11 @@
 //Hauptvariable zum umswitchen der onmeda, bdf, oder gofeminin version: 
+//sass --watch --sourcemap --trace main.scss:main.css
+
 $theme:gofeminin;
 
+
 @import "helpers";
+// @import "animation.css";
 // @import "fonts/clear-sans.css";
 
 /*Fonts for gofeminin/bdf/onmeda*/
@@ -36,11 +40,12 @@ $theme:gofeminin;
     /*Die Haupttheme Farbe. Bei gofeminin das prune*/
    $mainColor:#7e0846 !global;
    /*fettgedrucktes 2048 bei der subline und der HowTo Text:*/
-   $sublineStrongColor:#3f3d3d !global;
+   $subheadlineStrongColor:#3f3d3d !global;
+
    /*ButtonBG:*/
    $game-container-background: #e4d6dd !global;
    /*ButtonText */
-   $text-color: #000000 !global;
+   $text-color: #646464 !global;
    $bright-text-color: #ffffff !global;
    $mainFont:'Lato', 'Lucida Grande','Lucida Sans Unicode',Arial,Verdana,sans-serif !global;
    $fliesstTextFont:Arial, Helvetica, sans-serif !global;
@@ -60,10 +65,36 @@ Zusammenfassung ONMEDA:
   Fliesstext:
   font-family: Arial, Helvetica, sans-serif;
 */
+    $tile2Color:#0C8FB9 !global;
+    $tile4Color:#08637F !global;
+    $tile8Color:#043140 !global;
+    $tile16Color:#4a4a4a !global;
+    $tile32Color:#4E7A09 !global;
+    $tile64Color:#294005 !global;
+
+    $tile128Color:#DFDFDF !global;
+    $tile256Color:#7F7F7F !global;
+    $tile512Color:#404040 !global;
+    $tile1024Color:#FF690B !global;
+    $tile2048Color:#D65809 !global;
+
+    /*GRÜN::::Die Haupttheme Farbe. Bei gofeminin das prune*/
+   $mainColor:#709A12 !global;
+   /*dunkleres GRÜN:::: fettgedrucktes 2048 bei der subline und der HowTo Text:*/
+   $subheadlineStrongColor:#4a4a4a !global;
+
+   /*BLAU::::#0C8FB9*/
+   /*HELL-GRAU::::*/
+   $game-container-background: #dfdfdf !global;
+   /*ButtonText */
+   $text-color: #4E7A09 !global;
+   $bright-text-color: #ffffff !global;
+   $tile-color: #ffffff !global;
+
     $mainFont: 'Source Sans Pro',Arial,sans-serif !global;
-    $fliesstTextFont:Arial, Helvetica, sans-serif !global;
     $buttonFont: 'Lucida Grande','Lucida Sans Unicode',Arial,Verdana,sans-serif !global;
-}@else if theme ==bdf{
+    $fliesstTextFont:Arial, Helvetica, sans-serif !global;
+}@else if $theme == bdf{
   /*
   Button, Fliesstext:
   font-family: tahoma, arial, helvetica, sans-serif;
@@ -71,7 +102,73 @@ Zusammenfassung ONMEDA:
   Überschrift, Logo:
   font-family: Georgia, serif;
 */
+   $mainColor:rgb(228, 17, 41) !global;
+
+   /*fettgedrucktes 2048 bei der subline und der HowTo Text:*/
+   //$subheadlineStrongColor:#DC6993 !global;
+   $subheadlineStrongColor:#3f3e3e !global;
+
+    $tile2Color:#FFC6DB !global;
+    $tile4Color:#DC6993 !global;
+    $tile8Color:#7F636D !global;
+    $tile16Color:#E9E9E9 !global;
+    $tile32Color:#CCC9C9 !global;
+    $tile64Color:#3F3E3E !global;
+
+    $tile128Color:#FF6072 !global;
+    $tile256Color:#FF132E !global;
+    $tile512Color:#CC0F25 !global;
+
+    $tile1024Color:#7F3039 !global;
+    $tile2048Color:#F0FF07 !global;
+   /*HELL-GRAU::::*/
+   $game-container-background: #F7F7F7 !global;
+   /*ButtonText */
+   $text-color: #666 !global;
+   $bright-text-color: #ffffff !global;
+   $tile-color: #ffffff !global;
+
+
+
     $mainFont: Georgia, serif !global;
+    $fliesstTextFont: tahoma, arial, helvetica, sans-serif !global;
+    $buttonFont:tahoma, arial, helvetica, sans-serif !global;
+}@else if $theme == hastenichtgesehn{
+  /*
+  Button, Fliesstext:
+  font-family: tahoma, arial, helvetica, sans-serif;
+
+  Überschrift, Logo:
+  font-family: Georgia, serif;
+*/
+   $mainColor:grey !global;
+
+   /*fettgedrucktes 2048 bei der subline und der HowTo Text:*/
+   $subheadlineStrongColor:#7F5959 !global;
+
+    $tile2Color:#FFC6DB !global;
+    $tile4Color:#DC6993 !global;
+    $tile8Color:#7F636D !global;
+    $tile16Color:#E9E9E9 !global;
+    $tile32Color:#CCC9C9 !global;
+    $tile64Color:#3F3E3E !global;
+
+    $tile128Color:#FF6072 !global;
+    $tile256Color:#FF132E !global;
+    $tile512Color:#CC0F25 !global;
+    
+    $tile1024Color:#7F3039 !global;
+    $tile2048Color:#F0FF07 !global;
+   /*HELL-GRAU::::*/
+   $game-container-background: #F7F7F7 !global;
+   /*ButtonText */
+   $text-color: #666 !global;
+   $bright-text-color: #ffffff !global;
+   $tile-color: #ffffff !global;
+
+
+
+    $mainFont: tahoma, arial, helvetica, sans-serif !global;
     $fliesstTextFont: tahoma, arial, helvetica, sans-serif !global;
     $buttonFont:tahoma, arial, helvetica, sans-serif !global;
 }
@@ -98,21 +195,6 @@ $game-container-margin-top: 40px;
 
 $transition-speed: 100ms;
 
-html, body {
-  margin: 0;
-  padding: 0;
-
-  background: #ffffff;
-  color: $mainColor;
-  font-family: $mainFont;
-  font-size: 18px;
-}
-
-@debug 10em + 12em;
-
-body {
-  margin: 80px 0;
-}
 
 .heading {
   @include clearfix;
@@ -142,7 +224,7 @@ h1.title {
 .scores-container {
   float: right;
   text-align: right;
-  color: $sublineStrongColor;
+  color: $subheadlineStrongColor;
 }
 
 .score-container, .best-container {
@@ -184,51 +266,70 @@ h1.title {
 }
 
   .score-container {
-     padding: 15px 30px;
+    padding-bottom: 15px;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-top: 25px;
+    
+    @if $theme == onmeda{
+      padding-bottom: 35px;
+      padding-top: 15px;
+    }
   }
-
  .best-container {
-     padding: 15px 20px;
+    padding-bottom: 15px;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 25px;
+     @if $theme == onmeda{
+      padding-bottom: 35px;
+      padding-top: 15px;
+    }
   }
 
 
 .score-container:after {
   content: attr(data-content);
-}
-
-.best-container:after {
-  content: "Best"
-}
-
-p {
-  margin-top: 0;
-  margin-bottom: 10px;
-  line-height: 1.65;
-}
-
-a {
-  color: $text-color;
-  font-weight: bold;
-  text-decoration: underline;
-  cursor: pointer;
-}
-
-strong {
-  &.important {
-    text-transform: uppercase;
+  @if $theme == bdf{
+      font-size: 11px;
   }
 }
 
-hr {
-  border: none;
-  border-bottom: 1px solid  $game-container-background;
-  margin-top: 20px;
-  margin-bottom: 20px;
+.best-container:after {
+  content: attr(data-content);
+    @if $theme == bdf{
+      font-size: 11px;
+  }
 }
 
+
 .container {
+  hr {
+    border: none;
+    border-bottom: 1px solid  $game-container-background;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+
+  a {
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
+  p {
+    margin-top: 0;
+    margin-bottom: 10px;
+    line-height: 1.65;
+  }
+
   width: $field-width;
   margin: 0 auto;
+  padding: 0;
+
+  background: #ffffff;
+  color: $mainColor;
+  font-family: $mainFont;
+  font-size: 18px;
 }
 
 @include keyframes(fade-in) {
@@ -424,19 +525,56 @@ hr {
   $exponent: 1;
   $limit: 11;
 
-  // Colors for all 11 states, false = no special color
-  $special-colors: $tile2Color true, // 2
+
+  @if $theme == gofeminin{
+    $special-colors: $tile2Color false, // 2
+                   $tile4Color true, // 4
+                   $tile8Color false, // 8
+                   $tile16Color true, // 16
+                   $tile32Color true, // 32
+                   $tile64Color true, // 64
+                   $tile128Color false, // 128
+                   $tile256Color true, // 256
+                   $tile512Color true, // 512
+                   $tile1024Color true, // 1024
+                   $tile2048Color true !global; // 2048
+    }@else if $theme == onmeda{
+    $special-colors: $tile2Color true, // 2
                    $tile4Color true, // 4
                    $tile8Color true, // 8
                    $tile16Color true, // 16
                    $tile32Color true, // 32
                    $tile64Color true, // 64
+                   $tile128Color false, // 128
+                   $tile256Color true, // 256
+                   $tile512Color true, // 512
+                   $tile1024Color true, // 1024
+                   $tile2048Color true !global; // 2048
+      }@else if $theme == bdf{
+        $special-colors: $tile2Color false, // 2
+                   $tile4Color true, // 4
+                   $tile8Color true, // 8
+                   $tile16Color false, // 16
+                   $tile32Color false, // 32
+                   $tile64Color true, // 64
                    $tile128Color true, // 128
                    $tile256Color true, // 256
                    $tile512Color true, // 512
                    $tile1024Color true, // 1024
-                   $tile2048Color true; // 2048
-
+                   $tile2048Color true !global; // 2048
+      }@else if $theme == hastenichtgesehn{
+        $special-colors: $tile2Color false, // 2
+                   $tile4Color true, // 4
+                   $tile8Color true, // 8
+                   $tile16Color false, // 16
+                   $tile32Color false, // 32
+                   $tile64Color true, // 64
+                   $tile128Color true, // 128
+                   $tile256Color true, // 256
+                   $tile512Color true, // 512
+                   $tile1024Color true, // 1024
+                   $tile2048Color true !global; // 2048
+      }
   // Build tile colors
   @while $exponent <= $limit {
     $power: pow($base, $exponent);
@@ -457,6 +595,8 @@ hr {
 
       @if $bright-color {
         color: $bright-text-color;
+      }@else{
+        color: $text-color;
       }
 
       // Set background
@@ -547,11 +687,9 @@ hr {
 .game-intro {
   float: left;
   line-height: 42px;
+  color: $subheadlineStrongColor;
   margin-bottom: 0;
   font-family: $fliesstTextFont;
-  strong{
-    color:$sublineStrongColor;
-  }
 }
 
 .restart-button {
@@ -566,7 +704,7 @@ hr {
   font-family:$fliesstTextFont;
   font-size: 15px;
   margin-top: 20px;
-  color:$sublineStrongColor;
+  color:$subheadlineStrongColor;
 }
 
 @include smaller($mobile-threshold) {
@@ -578,21 +716,16 @@ hr {
   $tile-border-radius: 3px;
   $game-container-margin-top: 17px;
 
-  html, body {
-    font-size: 15px;
-  }
-
-  body {
-    margin: 20px 0;
-    padding: 0 20px;
-  }
 
   h1.title {
-    font-size: 27px;
+    font-size: 39px;
     margin-top: 15px;
   }
 
   .container {
+   font-size: 15px;
+    /* margin: 20px 0;
+    padding: 0 20px; */
     width: $field-width;
     margin: 0 auto;
   }

@@ -4,6 +4,7 @@ GofemHelper = (function() {
       //alle öffentlichen Methoden und Variablen kommen hier rein und werden später zurückgegeben:
       var pub ={};
       var dataParam;
+      var myVar;
 
        pub.gofem2048Game = {
         tagging : {},
@@ -21,6 +22,7 @@ GofemHelper = (function() {
         return GofemHelper.gofem2048Game;
       };
       pub.getParams = function () {
+        var that = this;
          var script = document.getElementById('gofemhelperJS');
          var tokens = script.src.split('?')[1].split('&');
          var params = {};
@@ -28,7 +30,7 @@ GofemHelper = (function() {
          for(var k=0; k<tokens.length; k++) {
            var tmp = tokens[k].split('=');
           if (tmp[0]=="id"){
-              GofemHelper.gofem2048Game.settings.id=tmp[1];
+              //GofemHelper.gofem2048Game.settings.id=tmp[1];
           }else if (tmp[0]=="lang"){
              GofemHelper. gofem2048Game.settings.lang=tmp[1];
           }else if (tmp[0]=="mainURL"){
@@ -40,18 +42,21 @@ GofemHelper = (function() {
           }else if (tmp[0]=="call_timer_function_time"){
             if (tmp[1] != undefined){
               GofemHelper.gofem2048Game.call_timer_function_time=tmp[1];
+              //alert ("tmp[1]: "+tmp[1]);
             }
           }else if (tmp[0]=="call_timer_function_name"){
             GofemHelper.gofem2048Game.call_timer_function_name=tmp[1];
           }else if (tmp[0]=="SSOPath"){
             GofemHelper.gofem2048Game.SSOPath=tmp[1];
           }
-        //only set the Ad reload if its been set by the params:
-        if (GofemHelper.gofem2048Game.call_timer_function_name !=undefined && GofemHelper.gofem2048Game.call_timer_function_name.length > 2 && GofemHelper.gofem2048Game.call_timer_function_time !=undefined){
-              var myVar = setInterval(function(){callAddReload()},GofemHelper.gofem2048Game.call_timer_function_time);
-        }
        }
-       //alert ("GofemHelper. gofem2048Game.settings.lang: "+GofemHelper. gofem2048Game.settings.lang);
+        //only set the Ad reload if its been set by the params:
+        if (GofemHelper.gofem2048Game.call_timer_function_name !=undefined && GofemHelper.gofem2048Game.call_timer_function_name.length > 2 && GofemHelper.gofem2048Game.call_timer_function_time !=undefined && typeof(GofemHelper.gofem2048Game.call_timer_function_time) != "object" ){
+              if (myVar ==undefined){
+               //alert ("myVar: "+myVar+"GofemHelper. gofem2048Game.settings.lang: "+GofemHelper.gofem2048Game.call_timer_function_name+" ::: "+typeof(GofemHelper.gofem2048Game.call_timer_function_time));
+                myVar = setInterval(function(){that.callAddReload()},GofemHelper.gofem2048Game.call_timer_function_time);
+              }
+        }
      };
      
       pub.tagging = function (){
@@ -73,8 +78,15 @@ GofemHelper = (function() {
 
      pub.setHtmlOutput = function (){
          var that =this;
-         var myparameterurl="text/strings_"+this.gofem2048Game.settings.lang+".txt";
-         //alert ("myparameterurl: "+myparameterurl)
+         //var myparameterurl="text/strings_"+this.gofem2048Game.settings.lang+".txt";
+          console.log("--->"+this.gofem2048Game.mainURL);
+        if (this.gofem2048Game.mainURL !=""){
+           var myparameterurl=this.gofem2048Game.mainURL+"/text/strings_"+this.gofem2048Game.settings.lang+".txt";
+        }else {
+           var myparameterurl="text/strings_"+this.gofem2048Game.settings.lang+".txt";
+        } 
+       
+
          $.getJSON(myparameterurl,function(dataParam){
             that.dataParam=dataParam;
              $( "p.game-explanation" ).html(dataParam[0].general.how_to_text_short);

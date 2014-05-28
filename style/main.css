@@ -16,17 +16,6 @@
 /*fettgedrucktes 2048 bei der subline und der HowTo Text:*/
 /*ButtonBG:*/
 /*ButtonText */
-html, body {
-  margin: 0;
-  padding: 0;
-  background: #ffffff;
-  color: #7e0846;
-  font-family: "Lato", "Lucida Grande", "Lucida Sans Unicode", Arial, Verdana, sans-serif;
-  font-size: 18px; }
-
-body {
-  margin: 80px 0; }
-
 .heading:after {
   content: "";
   display: block;
@@ -96,7 +85,7 @@ h1.title {
     font-size: 25px;
     line-height: 25px;
     font-weight: bold;
-    color: rgba(0, 0, 0, 0.9);
+    color: rgba(100, 100, 100, 0.9);
     z-index: 100;
     -webkit-animation: move-up 600ms ease-in;
     -moz-animation: move-up 600ms ease-in;
@@ -106,10 +95,16 @@ h1.title {
     animation-fill-mode: both; }
 
 .score-container {
-  padding: 15px 30px; }
+  padding-bottom: 15px;
+  padding-left: 40px;
+  padding-right: 40px;
+  padding-top: 25px; }
 
 .best-container {
-  padding: 15px 20px; }
+  padding-bottom: 15px;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-top: 25px; }
 
 .score-container:after {
   content: attr(data-content); }
@@ -117,29 +112,26 @@ h1.title {
 .best-container:after {
   content: attr(data-content); }
 
-p {
-  margin-top: 0;
-  margin-bottom: 10px;
-  line-height: 1.65; }
-
-a {
-  color: black;
-  font-weight: bold;
-  text-decoration: underline;
-  cursor: pointer; }
-
-strong.important {
-  text-transform: uppercase; }
-
-hr {
-  border: none;
-  border-bottom: 1px solid #e4d6dd;
-  margin-top: 20px;
-  margin-bottom: 20px; }
-
 .container {
   width: 500px;
-  margin: 0 auto; }
+  margin: 0 auto;
+  padding: 0;
+  background: #ffffff;
+  color: #7e0846;
+  font-family: "Lato", "Lucida Grande", "Lucida Sans Unicode", Arial, Verdana, sans-serif;
+  font-size: 18px; }
+  .container hr {
+    border: none;
+    border-bottom: 1px solid #e4d6dd;
+    margin-top: 20px;
+    margin-bottom: 20px; }
+  .container a {
+    font-weight: bold;
+    cursor: pointer; }
+  .container p {
+    margin-top: 0;
+    margin-bottom: 10px;
+    line-height: 1.65; }
 
 @-webkit-keyframes fade-in {
   0% {
@@ -337,13 +329,13 @@ hr {
     font-size: 55px;
     font-family: Arial, Helvetica, sans-serif; }
   .tile.tile-2 .tile-inner {
-    color: white;
+    color: #646464;
     background: #cecbcc; }
   .tile.tile-4 .tile-inner {
     color: white;
     background: #929191; }
   .tile.tile-8 .tile-inner {
-    color: white;
+    color: #646464;
     background: #e5c9d8; }
   .tile.tile-16 .tile-inner {
     color: white;
@@ -355,7 +347,7 @@ hr {
     color: white;
     background: #9c6785; }
   .tile.tile-128 .tile-inner {
-    color: white;
+    color: #646464;
     background: #e1e07e;
     font-size: 45px; }
     @media screen and (max-width: 520px) {
@@ -503,10 +495,9 @@ hr {
 .game-intro {
   float: left;
   line-height: 42px;
+  color: #3f3d3d;
   margin-bottom: 0;
   font-family: Arial, Helvetica, sans-serif; }
-  .game-intro strong {
-    color: #3f3d3d; }
 
 .restart-button {
   display: inline-block;
@@ -529,18 +520,14 @@ hr {
   color: #3f3d3d; }
 
 @media screen and (max-width: 520px) {
-  html, body {
-    font-size: 15px; }
-
-  body {
-    margin: 20px 0;
-    padding: 0 20px; }
-
   h1.title {
-    font-size: 27px;
+    font-size: 39px;
     margin-top: 15px; }
 
   .container {
+    font-size: 15px;
+    /* margin: 20px 0;
+    padding: 0 20px; */
     width: 280px;
     margin: 0 auto; }
 
