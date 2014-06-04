@@ -38,7 +38,7 @@ $theme:gofeminin;
    /*fettgedrucktes 2048 bei der subline und der HowTo Text:*/
    $sublineStrongColor:#3f3d3d !global;
    /*ButtonBG:*/
-   $game-container-background: #e4d6dd !global;
+   $game-container-background: #e8e8e8 !global;
    /*ButtonText */
    $text-color: #000000 !global;
    $bright-text-color: #ffffff !global;
@@ -152,7 +152,7 @@ h1.title {
   background: $game-container-background;
   font-size: 20px;
   height: $height;
-  line-height: $height + 22px;
+  line-height: $height + 10px;
   font-weight: bold;
   border-radius: 3px;
   margin-top: 8px;
@@ -183,12 +183,9 @@ h1.title {
   }
 }
 
-  .score-container {
-     padding: 15px 30px;
-  }
-
- .best-container {
-     padding: 15px 20px;
+  .score-container,
+  .best-container {
+     padding: 25px 40px;
   }
 
 
@@ -549,6 +546,8 @@ hr {
   line-height: 42px;
   margin-bottom: 0;
   font-family: $fliesstTextFont;
+  font-size: 16px;
+  color: $tile4Color;
   strong{
     color:$sublineStrongColor;
   }
@@ -556,10 +555,12 @@ hr {
 
 .restart-button {
   @include button;
+  padding: 3px 15px;
   display: block;
   text-align: center;
   float: right;
   font-family: $buttonFont;
+  font-size: 16px;
 }
 
 .game-explanation {
