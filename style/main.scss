@@ -43,7 +43,7 @@ $theme:gofeminin;
    $subheadlineStrongColor:#3f3d3d !global;
 
    /*ButtonBG:*/
-   $game-container-background: #e4d6dd !global;
+   $game-container-background: #e8e8e8 !global;
    /*ButtonText */
    $text-color: #646464 !global;
    $bright-text-color: #ffffff !global;
@@ -236,12 +236,12 @@ h1.title {
   @if $theme != onmeda{
     height: $height;
   }
-  line-height: $height + 22px;
+  line-height: $height + 10px;
   font-weight: bold;
   border-radius: 3px;
   margin-top: 8px;
   text-align: center;
-  
+
   @if $theme == onmeda{
      margin-bottom: 10px;
   }
@@ -271,31 +271,12 @@ h1.title {
   }
 }
 
-  .score-container {
-    @if $theme != onmeda{
-      padding-bottom: 15px;
-    }
-    padding-left: 40px;
-    padding-right: 40px;
-    padding-top: 25px;
-    
-    // @if $theme == onmeda{
-    //   padding-bottom: 35px;
-    //   padding-top: 15px;
-    // }
-  }
- .best-container {
-    @if $theme != onmeda{
-      padding-bottom: 15px;
-    }
-    padding-left: 30px;
-    padding-right: 30px;
-    padding-top: 25px;
-
-    //  @if $theme == onmeda{
-    //   padding-bottom: 35px;
-    //   padding-top: 15px;
-    // }
+  .score-container,
+  .best-container {
+     padding: 25px 40px;
+      @if $theme != onmeda{
+        padding-bottom: 15px;
+      }
   }
 
 
@@ -696,6 +677,7 @@ h1.title {
 }
 
 .game-intro {
+  font-size: 16px;
   float: left;
   line-height: 42px;
   color: $subheadlineStrongColor;
@@ -708,10 +690,12 @@ h1.title {
 
 .restart-button {
   @include button;
+  padding: 3px 15px;
   display: block;
   text-align: center;
   float: right;
   font-family: $buttonFont;
+  font-size: 16px;
 }
 
 .game-explanation {
