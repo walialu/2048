@@ -52,7 +52,29 @@
       "callbacks": [
         {
           "command": "cp",
-          "args": "-pr ./src/share/* ./dist/gofeminin.de/"
+          "args": "-pr ./src/share/generate_stripes.png ./src/share/index.html ./dist/onmeda.de/"
+        }
+      ]
+    },
+    {
+      "id": "files",
+      "author": "Marco Kellershoff <marco@aufem.co>",
+      "comment": "Copies shared files",
+      "callbacks": [
+        {
+          "command": "cp",
+          "args": "-pr ./src/share/generate_stripes.png ./src/share/index.html ./dist/gofeminin.de/"
+        }
+      ]
+    },
+    {
+      "id": "files",
+      "author": "Marco Kellershoff <marco@aufem.co>",
+      "comment": "Copies shared files",
+      "callbacks": [
+        {
+          "command": "cp",
+          "args": "-pr ./src/share/generate_stripes.png ./src/share/index.html ./dist/bildderfrau.de/"
         }
       ]
     },
