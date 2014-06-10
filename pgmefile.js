@@ -38,11 +38,46 @@
     {
       "id": "js",
       "author": "Marco Kellershoff <marco@aufem.co>",
-      "comment": "Build app.js with translations.",
+      "comment": "onmeda.de language and config",
+      "filepath": "./dist/onmeda.de/js/app.js",
+      "contents": [
+        "./_tmp_app.js",
+        "./src/_initLanguage_Start.js",
+        "./src/text/de.js",
+        "./src/_initLanguage_End.js",
+        "./src/_initConfig_Start.js",
+        "./src/config/onmeda.de.js",
+        "./src/_initConfig_End.js"
+      ]
+    },
+    {
+      "id": "js",
+      "author": "Marco Kellershoff <marco@aufem.co>",
+      "comment": "bildderfrau.de language and config",
+      "filepath": "./dist/bildderfrau.de/js/app.js",
+      "contents": [
+        "./_tmp_app.js",
+        "./src/_initLanguage_Start.js",
+        "./src/text/de.js",
+        "./src/_initLanguage_End.js",
+        "./src/_initConfig_Start.js",
+        "./src/config/bildderfrau.de.js",
+        "./src/_initConfig_End.js"
+      ]
+    },
+    {
+      "id": "js",
+      "author": "Marco Kellershoff <marco@aufem.co>",
+      "comment": "gofeminin.de language and config",
       "filepath": "./dist/gofeminin.de/js/app.js",
       "contents": [
         "./_tmp_app.js",
-        "./src/text/de.js"
+        "./src/_initLanguage_Start.js",
+        "./src/text/de.js",
+        "./src/_initLanguage_End.js",
+        "./src/_initConfig_Start.js",
+        "./src/config/gofeminin.de.js",
+        "./src/_initConfig_End.js"
       ]
     },
     {
@@ -168,6 +203,18 @@
           "comment": "Purging temp files",
           "command": "rm",
           "args": "./_tmp_portal.scss"
+        }
+      ]
+    },
+    {
+      "id": "purge",
+      "watcherOnly": false,
+      "author": "Marco Kellershoff <marco@aufem.co>",
+      "comment": "cleaning up temp files..",
+      "callbacks": [
+        {
+          "command": "rm",
+          "args": "./_tmp_app.js ./_tmp_generic.scss"
         }
       ]
     }

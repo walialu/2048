@@ -4,7 +4,6 @@ function GameManager(size, InputManager, Actuator, StorageManager) {
   this.storageManager = new StorageManager;
   this.actuator       = new Actuator;
   //this.gofemHelper    = new HelperClass;
-  this.GofemHelper =GofemHelper;
   this.startTiles     = 2;
 
   //move siehe Z.130:
@@ -17,14 +16,12 @@ function GameManager(size, InputManager, Actuator, StorageManager) {
 
 // Restart the game
 GameManager.prototype.setParameters = function () {
-  GofemHelper.getParams();
-  GofemHelper.setHtmlOutput();
+  window.GofemHelper.gofem2048Game.setHtmlOutput();
   this.setup();
 };
 
 // Restart the game
 GameManager.prototype.restart = function () {
-  //GofemHelper.tagging();
   this.storageManager.clearGameState();
   this.actuator.continueGame(); // Clear the game won/lost message
   this.setup();
@@ -192,7 +189,7 @@ GameManager.prototype.move = function (direction) {
 
   if (moved) {
     //Tagging...
-    GofemHelper.tagging();
+    window.GofemHelper.gofem2048Game.tagging();
     this.addRandomTile();
 
     if (!this.movesAvailable()) {

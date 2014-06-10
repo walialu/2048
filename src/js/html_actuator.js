@@ -38,7 +38,7 @@ HTMLActuator.prototype.actuate = function (grid, metadata) {
 // Continues the game (both restart and keep playing)
 HTMLActuator.prototype.continueGame = function () {
   //console.log ("HTMLActuator.prototype.continueGame");
-  GofemHelper.tagging();
+  GofemHelper.gofem2048Game.tagging();
   this.clearMessage();
 };
 
@@ -129,7 +129,7 @@ HTMLActuator.prototype.updateBestScore = function (bestScore) {
 HTMLActuator.prototype.message = function (won) {
   var type    = won ? "game-won" : "game-over";
   this.messageContainer.classList.add(type);
-  GofemHelper.setHTMLOutputWinLose(won);
+  GofemHelper.gofem2048Game.setHTMLOutputWinLose(won);
 };
 
 HTMLActuator.prototype.clearMessage = function () {
