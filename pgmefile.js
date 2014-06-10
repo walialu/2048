@@ -114,26 +114,6 @@
       ]
     },
     {
-      "id": "js",
-      "author": "Marco Kellershoff <marco@aufem.co>",
-      "comment": "Build app.js with translations.",
-      "filepath": "./dist/onmeda.de/js/app.js",
-      "contents": [
-        "./_tmp_app.js",
-        "./src/text/de.js"
-      ]
-    },
-    {
-      "id": "js",
-      "author": "Marco Kellershoff <marco@aufem.co>",
-      "comment": "Build app.js with translations.",
-      "filepath": "./dist/bildderfrau.de/js/app.js",
-      "contents": [
-        "./_tmp_app.js",
-        "./src/text/de.js"
-      ]
-    },
-    {
       "id": "sass",
       "author": "Marco Kellershoff <marco@aufem.co>",
       "comment": "Combine to one generic style",
