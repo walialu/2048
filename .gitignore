@@ -1,5 +1,5 @@
 .sass-cache/
-dist
+dist/*/*
 git_test/
 fonts
 meta
