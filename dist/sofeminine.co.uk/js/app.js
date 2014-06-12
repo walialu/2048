@@ -1019,18 +1019,18 @@ window.GofemHelper.gofem2048Game.setLanguage(
 {
   "general": {
     "game_title": "2048",
-    "game_subline": "Verschmelzen Sie Kacheln mit gleichen Zahlen und versuchen Sie, die Kachel mit der Zahl <strong>2048</strong> zu erreichen!",
-    "how_to_text_short": "<strong>Spielanleitung:</strong> Verwenden Sie die <strong>Pfeiltasten</strong> (oben, unten, rechts, links), um die Kacheln zu bewegen. Alle Kacheln bewegen sich dabei gleichzeitig in die gewählte Richtung. Mit jedem Verschieben erscheint eine neue Kachel mit dem Wert 2 oder 4 im Spielfeld. Wenn sich zwei Kacheln mit der gleichen Zahl berühren, verschmelzen diese zu einer Kachel mit deren Summe (also 2 + 2 = 4, 4 + 4 = 8 etc.). Ziel ist, eine Kachel mit der Zahl <strong>2048</strong> zu erreichen.<br/><br/><strong>Punktzahl:</strong> Mit jedem Verschmelzen erhalten Sie die entsprechenden Zahlenwerte der Kacheln als Punkte im Feld Resultat gutgeschrieben. Ihren persönlichen Bestwert sehen Sie im Feld &quot:Rekord&quot;.",
-    "label_game_page": "Zeit",
-    "text_game_end_page": "Sie haben gewonnen",
-    "text_result": "Resultat",
-    "label_points": "Punkte",
+    "game_subline": "Join the numbers and get to the <strong>2048</strong> tile!",
+    "how_to_text_short": "<strong>How to play:</strong> To move the tiles in any direction use the <strong>arrow keys</strong> (up, down, right, left). If two tiles with the same number collide, they merge into one tile with the sum of their numbers (so two 4 tiles merge to form one 8 tile etc). The objective is to form a tile with the number <strong>2048</strong>. The game ends when all the fields are covered with tiles.",
+    "label_game_page": "Time",
+    "text_game_end_page": "You win",
+    "text_result": "Result",
+    "label_points": "Score",
     "text_end_game_lost": "Game Over",
-    "label_score": "Rekord",
+    "label_score": "Best",
     "buttons": {
-      "button_end_game": "Weiterspielen",
-      "button_retry": "Nochmal spielen",
-      "button_new_game": "Neues Spiel"
+      "button_end_game": "Keep going",
+      "button_retry": "Try again",
+      "button_new_game": "New game"
     }
   }
 }
@@ -1041,10 +1041,10 @@ window.GofemHelper.gofem2048Game.setSettings(
 
 {
   "id": 34,
-  "siteID": 26,
-  "counterPixelMethodName": "call_IVW",
-  "callTimerFunctionName": "",
-  "callTimerFunctionTime": ""
+  "siteID": 5,
+  "counterPixelMethodName": "af_doRefreshStats",
+  "callTimerFunctionName": "af_doRefreshFrame",
+  "callTimerFunctionTime": 9000
 }
 
 );

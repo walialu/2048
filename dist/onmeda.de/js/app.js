@@ -1041,7 +1041,7 @@ window.GofemHelper.gofem2048Game.setSettings(
 
 {
   "id": 34,
-  "siteID": 4,
+  "siteID": 19,
   "counterPixelMethodName": "setIVWPixel",
   "callTimerFunctionName": "",
   "callTimerFunctionTime": ""

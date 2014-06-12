@@ -1019,18 +1019,18 @@ window.GofemHelper.gofem2048Game.setLanguage(
 {
   "general": {
     "game_title": "2048",
-    "game_subline": "Verschmelzen Sie Kacheln mit gleichen Zahlen und versuchen Sie, die Kachel mit der Zahl <strong>2048</strong> zu erreichen!",
-    "how_to_text_short": "<strong>Spielanleitung:</strong> Verwenden Sie die <strong>Pfeiltasten</strong> (oben, unten, rechts, links), um die Kacheln zu bewegen. Alle Kacheln bewegen sich dabei gleichzeitig in die gewählte Richtung. Mit jedem Verschieben erscheint eine neue Kachel mit dem Wert 2 oder 4 im Spielfeld. Wenn sich zwei Kacheln mit der gleichen Zahl berühren, verschmelzen diese zu einer Kachel mit deren Summe (also 2 + 2 = 4, 4 + 4 = 8 etc.). Ziel ist, eine Kachel mit der Zahl <strong>2048</strong> zu erreichen.<br/><br/><strong>Punktzahl:</strong> Mit jedem Verschmelzen erhalten Sie die entsprechenden Zahlenwerte der Kacheln als Punkte im Feld Resultat gutgeschrieben. Ihren persönlichen Bestwert sehen Sie im Feld &quot:Rekord&quot;.",
-    "label_game_page": "Zeit",
-    "text_game_end_page": "Sie haben gewonnen",
-    "text_result": "Resultat",
-    "label_points": "Punkte",
-    "text_end_game_lost": "Game Over",
-    "label_score": "Rekord",
+    "game_subline": "Reliez les nombres et faites apparaître la case <strong> 2048 </strong>!",
+    "how_to_text_short": "<strong>Comment jouer:</strong> Le but de ce casse-tête est d’obtenir 2048 points grâce aux cases numérotées. Dès que vous avez deux cases identiques sur une même ligne ou sur une même colonne (sans aucune case remplie entre elles), fusionnez-les en utilisant les touches flèche (haut, bas, droite, gauche). Leur nombre s’additionne et s’inscrit dans la case. L'objectif est de former une tuile avec le nombre <strong> 2048 </strong>. Le jeu se termine lorsque tous les champs sont couverts de nombres.<br><br>Véritable phénomène, le 2048 est un jeu de logique et de réflexion qui vous défie et passionne les foules. Dans les transports en commun, dans la rue ou encore dans la salle d'attente du médecin, bref, un peu partout, vous pouvez <strong>jouer au 2048 en ligne</strong> et faire croître votre record.<br>A mi-chemin entre les jeux de logique et les jeux de réflexion, le 2048 est vraiment un jeu addictif dont vous ne pourrez plus vous passer. En effet, au fur et à mesure de votre progression, le jeu devient plus difficile et requiert plus de temps, de patience et de réflexion pour gagner.<br>Testez-vous dès maintenant grâce à notre <strong>jeu 2048 en ligne et gratuit </strong>!",
+    "label_game_page": "Temps",
+    "text_game_end_page": "Tu as gagné !",
+    "text_result": "Résultat",
+    "label_points": "Score",
+    "text_end_game_lost": "Perdu !",
+    "label_score": "Record",
     "buttons": {
-      "button_end_game": "Weiterspielen",
-      "button_retry": "Nochmal spielen",
-      "button_new_game": "Neues Spiel"
+      "button_end_game": "Continuer",
+      "button_retry": "Essayer encore",
+      "button_new_game": "Nouveau jeu"
     }
   }
 }
@@ -1041,10 +1041,10 @@ window.GofemHelper.gofem2048Game.setSettings(
 
 {
   "id": 34,
-  "siteID": 26,
-  "counterPixelMethodName": "call_IVW",
-  "callTimerFunctionName": "",
-  "callTimerFunctionTime": ""
+  "siteID": 1,
+  "counterPixelMethodName": "af_doRefreshStats",
+  "callTimerFunctionName": "af_doRefreshFrame",
+  "callTimerFunctionTime": 9000
 }
 
 );

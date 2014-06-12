@@ -53,6 +53,141 @@
     {
       "id": "js",
       "author": "Marco Kellershoff <marco@aufem.co>",
+      "comment": "alfemminile.com language and config",
+      "filepath": "./dist/alfemminile.com/js/app.js",
+      "contents": [
+        "./_tmp_app.js",
+        "./src/_initLanguage_Start.js",
+        "./src/text/it.js",
+        "./src/_initLanguage_End.js",
+        "./src/_initConfig_Start.js",
+        "./src/config/alfemminile.com.js",
+        "./src/_initConfig_End.js"
+      ]
+    },
+    {
+      "id": "js",
+      "author": "Marco Kellershoff <marco@aufem.co>",
+      "comment": "aufeminin.com language and config",
+      "filepath": "./dist/aufeminin.com/js/app.js",
+      "contents": [
+        "./_tmp_app.js",
+        "./src/_initLanguage_Start.js",
+        "./src/text/fr.js",
+        "./src/_initLanguage_End.js",
+        "./src/_initConfig_Start.js",
+        "./src/config/aufeminin.com.js",
+        "./src/_initConfig_End.js"
+      ]
+    },
+    {
+      "id": "js",
+      "author": "Marco Kellershoff <marco@aufem.co>",
+      "comment": "enfeminino.com language and config",
+      "filepath": "./dist/enfeminino.com/js/app.js",
+      "contents": [
+        "./_tmp_app.js",
+        "./src/_initLanguage_Start.js",
+        "./src/text/es.js",
+        "./src/_initLanguage_End.js",
+        "./src/_initConfig_Start.js",
+        "./src/config/enfeminino.com.js",
+        "./src/_initConfig_End.js"
+      ]
+    },
+    {
+      "id": "js",
+      "author": "Marco Kellershoff <marco@aufem.co>",
+      "comment": "ofeminin.pl language and config",
+      "filepath": "./dist/ofeminin.pl/js/app.js",
+      "contents": [
+        "./_tmp_app.js",
+        "./src/_initLanguage_Start.js",
+        "./src/text/pl.js",
+        "./src/_initLanguage_End.js",
+        "./src/_initConfig_Start.js",
+        "./src/config/ofeminin.pl.js",
+        "./src/_initConfig_End.js"
+      ]
+    },
+    {
+      "id": "js",
+      "author": "Marco Kellershoff <marco@aufem.co>",
+      "comment": "sofeminine.co.uk language and config",
+      "filepath": "./dist/sofeminine.co.uk/js/app.js",
+      "contents": [
+        "./_tmp_app.js",
+        "./src/_initLanguage_Start.js",
+        "./src/text/en.js",
+        "./src/_initLanguage_End.js",
+        "./src/_initConfig_Start.js",
+        "./src/config/sofeminine.co.uk.js",
+        "./src/_initConfig_End.js"
+      ]
+    },
+    {
+      "id": "js",
+      "author": "Marco Kellershoff <marco@aufem.co>",
+      "comment": "taofemenino.com.br language and config",
+      "filepath": "./dist/taofemenino.com.br/js/app.js",
+      "contents": [
+        "./_tmp_app.js",
+        "./src/_initLanguage_Start.js",
+        "./src/text/pt.js",
+        "./src/_initLanguage_End.js",
+        "./src/_initConfig_Start.js",
+        "./src/config/taofemenino.com.br.js",
+        "./src/_initConfig_End.js"
+      ]
+    },
+    {
+      "id": "js",
+      "author": "Marco Kellershoff <marco@aufem.co>",
+      "comment": "wewomen.be language and config",
+      "filepath": "./dist/wewomen.be/js/app.js",
+      "contents": [
+        "./_tmp_app.js",
+        "./src/_initLanguage_Start.js",
+        "./src/text/nl.js",
+        "./src/_initLanguage_End.js",
+        "./src/_initConfig_Start.js",
+        "./src/config/wewomen.be.js",
+        "./src/_initConfig_End.js"
+      ]
+    },
+    {
+      "id": "js",
+      "author": "Marco Kellershoff <marco@aufem.co>",
+      "comment": "wewomen.ca language and config",
+      "filepath": "./dist/wewomen.ca/js/app.js",
+      "contents": [
+        "./_tmp_app.js",
+        "./src/_initLanguage_Start.js",
+        "./src/text/ca.js",
+        "./src/_initLanguage_End.js",
+        "./src/_initConfig_Start.js",
+        "./src/config/wewomen.ca.js",
+        "./src/_initConfig_End.js"
+      ]
+    },
+    {
+      "id": "js",
+      "author": "Marco Kellershoff <marco@aufem.co>",
+      "comment": "wewomen.us language and config",
+      "filepath": "./dist/wewomen.us/js/app.js",
+      "contents": [
+        "./_tmp_app.js",
+        "./src/_initLanguage_Start.js",
+        "./src/text/us.js",
+        "./src/_initLanguage_End.js",
+        "./src/_initConfig_Start.js",
+        "./src/config/wewomen.us.js",
+        "./src/_initConfig_End.js"
+      ]
+    },
+    {
+      "id": "js",
+      "author": "Marco Kellershoff <marco@aufem.co>",
       "comment": "bildderfrau.de language and config",
       "filepath": "./dist/bildderfrau.de/js/app.js",
       "contents": [
@@ -81,6 +216,96 @@
       ]
     },
     {
+      "id": "files",
+      "author": "Marco Kellershoff <marco@aufem.co>",
+      "comment": "Copies shared files",
+      "callbacks": [
+        {
+          "command": "cp",
+          "args": "-pr ./src/share/generate_stripes.png ./src/share/index.html ./dist/wewomen.us/"
+        }
+      ]
+    },{
+      "id": "files",
+      "author": "Marco Kellershoff <marco@aufem.co>",
+      "comment": "Copies shared files",
+      "callbacks": [
+        {
+          "command": "cp",
+          "args": "-pr ./src/share/generate_stripes.png ./src/share/index.html ./dist/wewomen.ca/"
+        }
+      ]
+    },{
+      "id": "files",
+      "author": "Marco Kellershoff <marco@aufem.co>",
+      "comment": "Copies shared files",
+      "callbacks": [
+        {
+          "command": "cp",
+          "args": "-pr ./src/share/generate_stripes.png ./src/share/index.html ./dist/wewomen.be/"
+        }
+      ]
+    },{
+      "id": "files",
+      "author": "Marco Kellershoff <marco@aufem.co>",
+      "comment": "Copies shared files",
+      "callbacks": [
+        {
+          "command": "cp",
+          "args": "-pr ./src/share/generate_stripes.png ./src/share/index.html ./dist/taofemenino.com.br/"
+        }
+      ]
+    },{
+      "id": "files",
+      "author": "Marco Kellershoff <marco@aufem.co>",
+      "comment": "Copies shared files",
+      "callbacks": [
+        {
+          "command": "cp",
+          "args": "-pr ./src/share/generate_stripes.png ./src/share/index.html ./dist/sofeminine.co.uk/"
+        }
+      ]
+    },{
+      "id": "files",
+      "author": "Marco Kellershoff <marco@aufem.co>",
+      "comment": "Copies shared files",
+      "callbacks": [
+        {
+          "command": "cp",
+          "args": "-pr ./src/share/generate_stripes.png ./src/share/index.html ./dist/ofeminin.pl/"
+        }
+      ]
+    },{
+      "id": "files",
+      "author": "Marco Kellershoff <marco@aufem.co>",
+      "comment": "Copies shared files",
+      "callbacks": [
+        {
+          "command": "cp",
+          "args": "-pr ./src/share/generate_stripes.png ./src/share/index.html ./dist/enfeminino.com/"
+        }
+      ]
+    },{
+      "id": "files",
+      "author": "Marco Kellershoff <marco@aufem.co>",
+      "comment": "Copies shared files",
+      "callbacks": [
+        {
+          "command": "cp",
+          "args": "-pr ./src/share/generate_stripes.png ./src/share/index.html ./dist/aufeminin.com/"
+        }
+      ]
+    },{
+      "id": "files",
+      "author": "Marco Kellershoff <marco@aufem.co>",
+      "comment": "Copies shared files",
+      "callbacks": [
+        {
+          "command": "cp",
+          "args": "-pr ./src/share/generate_stripes.png ./src/share/index.html ./dist/alfemminile.com/"
+        }
+      ]
+    },{
       "id": "files",
       "author": "Marco Kellershoff <marco@aufem.co>",
       "comment": "Copies shared files",

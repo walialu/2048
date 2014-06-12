@@ -1019,18 +1019,18 @@ window.GofemHelper.gofem2048Game.setLanguage(
 {
   "general": {
     "game_title": "2048",
-    "game_subline": "Verschmelzen Sie Kacheln mit gleichen Zahlen und versuchen Sie, die Kachel mit der Zahl <strong>2048</strong> zu erreichen!",
-    "how_to_text_short": "<strong>Spielanleitung:</strong> Verwenden Sie die <strong>Pfeiltasten</strong> (oben, unten, rechts, links), um die Kacheln zu bewegen. Alle Kacheln bewegen sich dabei gleichzeitig in die gewählte Richtung. Mit jedem Verschieben erscheint eine neue Kachel mit dem Wert 2 oder 4 im Spielfeld. Wenn sich zwei Kacheln mit der gleichen Zahl berühren, verschmelzen diese zu einer Kachel mit deren Summe (also 2 + 2 = 4, 4 + 4 = 8 etc.). Ziel ist, eine Kachel mit der Zahl <strong>2048</strong> zu erreichen.<br/><br/><strong>Punktzahl:</strong> Mit jedem Verschmelzen erhalten Sie die entsprechenden Zahlenwerte der Kacheln als Punkte im Feld Resultat gutgeschrieben. Ihren persönlichen Bestwert sehen Sie im Feld &quot:Rekord&quot;.",
-    "label_game_page": "Zeit",
-    "text_game_end_page": "Sie haben gewonnen",
-    "text_result": "Resultat",
-    "label_points": "Punkte",
-    "text_end_game_lost": "Game Over",
-    "label_score": "Rekord",
+    "game_subline":"Combine os números para conseguir o <strong>2048</strong>!",
+    "how_to_text_short": "Como jogar: O objetivo é formar uma casa apenas com o número <strong>2048</strong>. Para mover os números em uma direção específica, use as teclas <strong>para cima, para baixo, à direita, à esquerda</strong> de seu teclado. Se duas casas com o mesmo número colidirem, elas se fundem em uma casa só com a soma desses números (ex.: duas casas com o número 4 se fundem e formam uma casa com o número 8). O jogo termina quando todos os campos estão preenchidos por números.",
+    "label_game_page":"Tempo",
+    "text_game_end_page":"Você ganhou!",
+    "text_result":"Resultado",
+    "label_points":"Pontuação",
+    "text_end_game_lost":"Fim de jogo",
+    "label_score":"Melhor pontuação",
     "buttons": {
-      "button_end_game": "Weiterspielen",
-      "button_retry": "Nochmal spielen",
-      "button_new_game": "Neues Spiel"
+      "button_end_game": "Continuar",
+      "button_retry": "Tentar novamente",
+      "button_new_game": "Novo jogo"
     }
   }
 }
@@ -1041,10 +1041,10 @@ window.GofemHelper.gofem2048Game.setSettings(
 
 {
   "id": 34,
-  "siteID": 26,
-  "counterPixelMethodName": "call_IVW",
-  "callTimerFunctionName": "",
-  "callTimerFunctionTime": ""
+  "siteID": 41,
+  "counterPixelMethodName": "af_doRefreshStats",
+  "callTimerFunctionName": "af_doRefreshFrame",
+  "callTimerFunctionTime": 9000
 }
 
 );
