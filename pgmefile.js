@@ -1,7 +1,7 @@
 {
   "name": "Performance Gains Made Easy",
   "author": "Marco Kellershoff <mail@marco.kiwi>",
-  "version": "3.0.0",
+  "version": "3.1.1",
   "watchers": [
     {
       "id": "js",
@@ -222,7 +222,7 @@
       "callbacks": [
         {
           "command": "cp",
-          "args": "-pr ./src/share/generate_stripes.png ./src/share/index.html ./dist/wewomen.us/"
+          "args": "-pr ./src/share/* ./dist/wewomen.us/"
         }
       ]
     },{
@@ -232,7 +232,7 @@
       "callbacks": [
         {
           "command": "cp",
-          "args": "-pr ./src/share/generate_stripes.png ./src/share/index.html ./dist/wewomen.ca/"
+          "args": "-pr ./src/share/* ./dist/wewomen.ca/"
         }
       ]
     },{
@@ -242,7 +242,7 @@
       "callbacks": [
         {
           "command": "cp",
-          "args": "-pr ./src/share/generate_stripes.png ./src/share/index.html ./dist/wewomen.be/"
+          "args": "-pr ./src/share/* ./dist/wewomen.be/"
         }
       ]
     },{
@@ -252,7 +252,7 @@
       "callbacks": [
         {
           "command": "cp",
-          "args": "-pr ./src/share/generate_stripes.png ./src/share/index.html ./dist/taofemenino.com.br/"
+          "args": "-pr ./src/share/* ./dist/taofemenino.com.br/"
         }
       ]
     },{
@@ -262,7 +262,7 @@
       "callbacks": [
         {
           "command": "cp",
-          "args": "-pr ./src/share/generate_stripes.png ./src/share/index.html ./dist/sofeminine.co.uk/"
+          "args": "-pr ./src/share/* ./dist/sofeminine.co.uk/"
         }
       ]
     },{
@@ -272,7 +272,7 @@
       "callbacks": [
         {
           "command": "cp",
-          "args": "-pr ./src/share/generate_stripes.png ./src/share/index.html ./dist/ofeminin.pl/"
+          "args": "-pr ./src/share/* ./dist/ofeminin.pl/"
         }
       ]
     },{
@@ -282,7 +282,7 @@
       "callbacks": [
         {
           "command": "cp",
-          "args": "-pr ./src/share/generate_stripes.png ./src/share/index.html ./dist/enfeminino.com/"
+          "args": "-pr ./src/share/* ./dist/enfeminino.com/"
         }
       ]
     },{
@@ -292,7 +292,7 @@
       "callbacks": [
         {
           "command": "cp",
-          "args": "-pr ./src/share/generate_stripes.png ./src/share/index.html ./dist/aufeminin.com/"
+          "args": "-pr ./src/share/* ./dist/aufeminin.com/"
         }
       ]
     },{
@@ -302,7 +302,7 @@
       "callbacks": [
         {
           "command": "cp",
-          "args": "-pr ./src/share/generate_stripes.png ./src/share/index.html ./dist/alfemminile.com/"
+          "args": "-pr ./src/share/* ./dist/alfemminile.com/"
         }
       ]
     },{
@@ -312,7 +312,7 @@
       "callbacks": [
         {
           "command": "cp",
-          "args": "-pr ./src/share/generate_stripes.png ./src/share/index.html ./dist/onmeda.de/"
+          "args": "-pr ./src/share/* ./dist/onmeda.de/"
         }
       ]
     },
@@ -323,7 +323,7 @@
       "callbacks": [
         {
           "command": "cp",
-          "args": "-pr ./src/share/generate_stripes.png ./src/share/index.html ./dist/gofeminin.de/"
+          "args": "-pr ./src/share/* ./dist/gofeminin.de/"
         }
       ]
     },
@@ -334,7 +334,7 @@
       "callbacks": [
         {
           "command": "cp",
-          "args": "-pr ./src/share/generate_stripes.png ./src/share/index.html ./dist/bildderfrau.de/"
+          "args": "-pr ./src/share/* ./dist/bildderfrau.de/"
         }
       ]
     },
