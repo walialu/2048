@@ -396,7 +396,7 @@
       "comment": "Prepend bildderfrau.de theme variable to scss file",
       "filepath": "./_tmp_portal.scss",
       "contents": [
-        "./src/style/__theme-gofeminin.scss",
+        "./src/style/__theme-bdf.scss",
         "./_tmp_generic.scss"
       ],
       "callbacks": [

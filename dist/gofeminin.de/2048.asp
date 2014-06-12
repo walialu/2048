@@ -1,5 +1,5 @@
 <%
-+pub_TargetCiblage=pub_TargetCiblage & ";game_2048"
+pub_TargetCiblage=pub_TargetCiblage & ";game_2048"
 
 af_HasMobileWebVersion=True
 af_MobileWebUrl="/spiele/2048.asp"

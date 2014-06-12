@@ -124,8 +124,8 @@ end if
     <p class="game-explanation"></p>
     <hr>
   </div>
-  <link href="style/main.css" rel="stylesheet" type="text/css">
-  <script src="js/app.js"></script> 
+  <link href="2048/style/main.css" rel="stylesheet" type="text/css">
+  <script src="2048/js/app.js"></script> 
 
   <script language="JavaScript" type="text/javascript">
       
