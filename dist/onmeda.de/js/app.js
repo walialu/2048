@@ -2,14 +2,13 @@
 /*vim:tabstop=2:noexpandtab */
 window.GofemHelper = window.GofemHelper || {};
 window.GofemHelper._game_2048 = function () {
+  var that = this;
   this.tagging = {};
   this.mainURL = {};
   this.languageObject = null;
   this.screens = {};
   this.settings = null;
   this.siteID = {};
-  this.callTimerFunctionTime = {};
-  this.callTimerFunctionName = {};
 
   /**
    * Sets the language
@@ -40,21 +39,32 @@ window.GofemHelper._game_2048 = function () {
   };
 
   this.initAdReload = function () {
-    var self = this;
-
-    if ( this.callTimerFunctionName && this.callTimerFunctionTime ) {
-      setInterval(
-        function(){
-          self.callAddReload();
-        },
-        self.callTimerFunctionTime
-      );
+    var set = this.settings,
+        isFunc = null;
+    if ( set.callTimerFunctionName && set.callTimerFunctionTime ) {
+      isFunc = eval ('typeof ' + set.callTimerFunctionName);
+      if (  isFunc === 'function' ){
+        setInterval(
+          function(){
+            eval(set.callTimerFunctionName + "()");
+          },
+          set.callTimerFunctionTime
+        );
+      } else {
+        window.console.log('Could not find callTimerFunctionName: ' +
+            set.callTimerFunctionName);
+      }
     }
   };
 
   this.tagging = function () {
-    if (this.settings.counterPixelMethodName){
-      eval ( this.settings.counterPixelMethodName+"()" );
+    var set = this.settings,
+        isFunc = null;
+    if (set.counterPixelMethodName){
+      isFunc = eval ('typeof ' + set.counterPixelMethodName);
+      if ( isFunc ) {
+        eval ( set.counterPixelMethodName+"()" );
+      }
     }
   };
 
@@ -108,6 +118,8 @@ window.GofemHelper._game_2048 = function () {
       lo.general.buttons.button_retry
     );
   };
+
+  setTimeout(function(){that.initAdReload();},1000);
 
   return this;
 };
