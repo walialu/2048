@@ -69,7 +69,7 @@
         {
           "comment": "Copies shared files",
           "command": "cp",
-          "args": "-pr ./src/share/* ./dist/onmeda.de/"
+          "args": "-r ./src/share/* ./dist/onmeda.de/"
         }
       ]
     },
@@ -88,7 +88,7 @@
         {
           "comment": "Copies shared files",
           "command": "cp",
-          "args": "-pr ./src/share/* ./dist/bildderfrau.de/"
+          "args": "-r ./src/share/* ./dist/bildderfrau.de/"
         }
       ]
     },
@@ -135,7 +135,7 @@
         {
           "comment": "Copies shared files",
           "command": "cp",
-          "args": "-pr ./src/share/* ./dist/alfemminile.com/"
+          "args": "-r ./src/share/* ./dist/alfemminile.com/"
         }
       ]
     },
@@ -168,7 +168,7 @@
         {
           "comment": "Copies shared files",
           "command": "cp",
-          "args": "-pr ./src/share/* ./dist/aufeminin.com/"
+          "args": "-r ./src/share/* ./dist/aufeminin.com/"
         }
       ]
     },
@@ -201,7 +201,7 @@
         {
           "comment": "Copies shared files",
           "command": "cp",
-          "args": "-pr ./src/share/* ./dist/enfeminino.com/"
+          "args": "-r ./src/share/* ./dist/enfeminino.com/"
         }
       ]
     },
@@ -234,7 +234,7 @@
         {
           "comment": "Copies shared files",
           "command": "cp",
-          "args": "-pr ./src/share/* ./dist/ofeminin.pl/"
+          "args": "-r ./src/share/* ./dist/ofeminin.pl/"
         }
       ]
     },
@@ -267,7 +267,7 @@
         {
           "comment": "Copies shared files",
           "command": "cp",
-          "args": "-pr ./src/share/* ./dist/sofeminine.co.uk/"
+          "args": "-r ./src/share/* ./dist/sofeminine.co.uk/"
         }
       ]
     },
@@ -300,7 +300,7 @@
         {
           "comment": "Copies shared files",
           "command": "cp",
-          "args": "-pr ./src/share/* ./dist/taofemenino.com.br/"
+          "args": "-r ./src/share/* ./dist/taofemenino.com.br/"
         }
       ]
     },
@@ -333,7 +333,7 @@
         {
           "comment": "Copies shared files",
           "command": "cp",
-          "args": "-pr ./src/share/* ./dist/wewomen.be/"
+          "args": "-r ./src/share/* ./dist/wewomen.be/"
         }
       ]
     },
@@ -366,7 +366,7 @@
         {
           "comment": "Copies shared files",
           "command": "cp",
-          "args": "-pr ./src/share/* ./dist/wewomen.ca/"
+          "args": "-r ./src/share/* ./dist/wewomen.ca/"
         }
       ]
     },
@@ -399,7 +399,7 @@
         {
           "comment": "Copies shared files",
           "command": "cp",
-          "args": "-pr ./src/share/* ./dist/wewomen.us/"
+          "args": "-r ./src/share/* ./dist/wewomen.us/"
         }
       ]
     },
@@ -432,7 +432,7 @@
         {
           "comment": "Copies shared files",
           "command": "cp",
-          "args": "-pr ./src/share/* ./dist/gofeminin.de/"
+          "args": "-r ./src/share/* ./dist/gofeminin.de/"
         }
       ]
     },
