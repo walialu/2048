@@ -1,23 +1,19 @@
 {
   "name": "Performance Gains Made Easy",
-  "author": "Marco Kellershoff <mail@marco.kiwi>",
-  "version": "3.1.1",
+  "version": "3.2.1",
   "watchers": [
     {
       "id": "js",
-      "author": "Marco Kellershoff <marco@aufem.co>",
       "filepath": "./src/js/app"
     },
     {
       "id": "sass",
-      "author": "Yvonne Ahmad <yvonne.ahmad@gofeminin.de>",
       "filepath": "./src/sass"
     }
   ],
   "jobs": [
     {
       "id": "js",
-      "author": "Marco Kellershoff <marco@aufem.co>",
       "comment": "Build generic app.js",
       "filepath": "./_tmp_app.js",
       "contents": [
@@ -36,8 +32,16 @@
       ]
     },
     {
+      "id": "sass",
+      "comment": "Combine to one generic style",
+      "filepath": "./_tmp_generic.scss",
+      "contents": [
+        "./src/style/helpers.scss",
+        "./src/style/main.scss"
+      ]
+    },
+    {
       "id": "js",
-      "author": "Marco Kellershoff <marco@aufem.co>",
       "comment": "onmeda.de language and config",
       "filepath": "./dist/onmeda.de/js/app.js",
       "contents": [
@@ -52,7 +56,58 @@
     },
     {
       "id": "js",
-      "author": "Marco Kellershoff <marco@aufem.co>",
+      "filepath": "./_tmp_portal.scss",
+      "contents": [
+        "./src/style/__theme-onmeda.scss",
+        "./_tmp_generic.scss"
+      ],
+      "callbacks": [
+        {
+          "command": "sass",
+          "args": "-q ./_tmp_portal.scss:./dist/onmeda.de/style/main.css"
+        },
+        {
+          "comment": "Copies shared files",
+          "command": "cp",
+          "args": "-pr ./src/share/* ./dist/onmeda.de/"
+        }
+      ]
+    },
+    {
+      "id": "js",
+      "filepath": "./_tmp_portal.scss",
+      "contents": [
+        "./src/style/__theme-bdf.scss",
+        "./_tmp_generic.scss"
+      ],
+      "callbacks": [
+        {
+          "command": "sass",
+          "args": "-q ./_tmp_portal.scss:./dist/bildderfrau.de/style/main.css"
+        },
+        {
+          "comment": "Copies shared files",
+          "command": "cp",
+          "args": "-pr ./src/share/* ./dist/bildderfrau.de/"
+        }
+      ]
+    },
+    {
+      "id": "js",
+      "comment": "gofeminin.de language and config",
+      "filepath": "./dist/gofeminin.de/js/app.js",
+      "contents": [
+        "./_tmp_app.js",
+        "./src/_initLanguage_Start.js",
+        "./src/text/de.js",
+        "./src/_initLanguage_End.js",
+        "./src/_initConfig_Start.js",
+        "./src/config/gofeminin.de.js",
+        "./src/_initConfig_End.js"
+      ]
+    },
+    {
+      "id": "js",
       "comment": "alfemminile.com language and config",
       "filepath": "./dist/alfemminile.com/js/app.js",
       "contents": [
@@ -67,7 +122,25 @@
     },
     {
       "id": "js",
-      "author": "Marco Kellershoff <marco@aufem.co>",
+      "filepath": "./_tmp_portal.scss",
+      "contents": [
+        "./src/style/__theme-gofeminin.scss",
+        "./_tmp_generic.scss"
+      ],
+      "callbacks": [
+        {
+          "command": "sass",
+          "args": "-q ./_tmp_portal.scss:./dist/alfemminile.com/style/main.css"
+        },
+        {
+          "comment": "Copies shared files",
+          "command": "cp",
+          "args": "-pr ./src/share/* ./dist/alfemminile.com/"
+        }
+      ]
+    },
+    {
+      "id": "js",
       "comment": "aufeminin.com language and config",
       "filepath": "./dist/aufeminin.com/js/app.js",
       "contents": [
@@ -82,7 +155,25 @@
     },
     {
       "id": "js",
-      "author": "Marco Kellershoff <marco@aufem.co>",
+      "filepath": "./_tmp_portal.scss",
+      "contents": [
+        "./src/style/__theme-gofeminin.scss",
+        "./_tmp_generic.scss"
+      ],
+      "callbacks": [
+        {
+          "command": "sass",
+          "args": "-q ./_tmp_portal.scss:./dist/aufeminin.com/style/main.css"
+        },
+        {
+          "comment": "Copies shared files",
+          "command": "cp",
+          "args": "-pr ./src/share/* ./dist/aufeminin.com/"
+        }
+      ]
+    },
+    {
+      "id": "js",
       "comment": "enfeminino.com language and config",
       "filepath": "./dist/enfeminino.com/js/app.js",
       "contents": [
@@ -97,7 +188,25 @@
     },
     {
       "id": "js",
-      "author": "Marco Kellershoff <marco@aufem.co>",
+      "filepath": "./_tmp_portal.scss",
+      "contents": [
+        "./src/style/__theme-gofeminin.scss",
+        "./_tmp_generic.scss"
+      ],
+      "callbacks": [
+        {
+          "command": "sass",
+          "args": "-q ./_tmp_portal.scss:./dist/enfeminino.com/style/main.css"
+        },
+        {
+          "comment": "Copies shared files",
+          "command": "cp",
+          "args": "-pr ./src/share/* ./dist/enfeminino.com/"
+        }
+      ]
+    },
+    {
+      "id": "js",
       "comment": "ofeminin.pl language and config",
       "filepath": "./dist/ofeminin.pl/js/app.js",
       "contents": [
@@ -112,7 +221,25 @@
     },
     {
       "id": "js",
-      "author": "Marco Kellershoff <marco@aufem.co>",
+      "filepath": "./_tmp_portal.scss",
+      "contents": [
+        "./src/style/__theme-gofeminin.scss",
+        "./_tmp_generic.scss"
+      ],
+      "callbacks": [
+        {
+          "command": "sass",
+          "args": "-q ./_tmp_portal.scss:./dist/ofeminin.pl/style/main.css"
+        },
+        {
+          "comment": "Copies shared files",
+          "command": "cp",
+          "args": "-pr ./src/share/* ./dist/ofeminin.pl/"
+        }
+      ]
+    },
+    {
+      "id": "js",
       "comment": "sofeminine.co.uk language and config",
       "filepath": "./dist/sofeminine.co.uk/js/app.js",
       "contents": [
@@ -127,7 +254,25 @@
     },
     {
       "id": "js",
-      "author": "Marco Kellershoff <marco@aufem.co>",
+      "filepath": "./_tmp_portal.scss",
+      "contents": [
+        "./src/style/__theme-gofeminin.scss",
+        "./_tmp_generic.scss"
+      ],
+      "callbacks": [
+        {
+          "command": "sass",
+          "args": "-q ./_tmp_portal.scss:./dist/sofeminine.co.uk/style/main.css"
+        },
+        {
+          "comment": "Copies shared files",
+          "command": "cp",
+          "args": "-pr ./src/share/* ./dist/sofeminine.co.uk/"
+        }
+      ]
+    },
+    {
+      "id": "js",
       "comment": "taofemenino.com.br language and config",
       "filepath": "./dist/taofemenino.com.br/js/app.js",
       "contents": [
@@ -142,7 +287,25 @@
     },
     {
       "id": "js",
-      "author": "Marco Kellershoff <marco@aufem.co>",
+      "filepath": "./_tmp_portal.scss",
+      "contents": [
+        "./src/style/__theme-gofeminin.scss",
+        "./_tmp_generic.scss"
+      ],
+      "callbacks": [
+        {
+          "command": "sass",
+          "args": "-q ./_tmp_portal.scss:./dist/taofemenino.com.br/style/main.css"
+        },
+        {
+          "comment": "Copies shared files",
+          "command": "cp",
+          "args": "-pr ./src/share/* ./dist/taofemenino.com.br/"
+        }
+      ]
+    },
+    {
+      "id": "js",
       "comment": "wewomen.be language and config",
       "filepath": "./dist/wewomen.be/js/app.js",
       "contents": [
@@ -157,7 +320,25 @@
     },
     {
       "id": "js",
-      "author": "Marco Kellershoff <marco@aufem.co>",
+      "filepath": "./_tmp_portal.scss",
+      "contents": [
+        "./src/style/__theme-gofeminin.scss",
+        "./_tmp_generic.scss"
+      ],
+      "callbacks": [
+        {
+          "command": "sass",
+          "args": "-q ./_tmp_portal.scss:./dist/wewomen.be/style/main.css"
+        },
+        {
+          "comment": "Copies shared files",
+          "command": "cp",
+          "args": "-pr ./src/share/* ./dist/wewomen.be/"
+        }
+      ]
+    },
+    {
+      "id": "js",
       "comment": "wewomen.ca language and config",
       "filepath": "./dist/wewomen.ca/js/app.js",
       "contents": [
@@ -172,7 +353,25 @@
     },
     {
       "id": "js",
-      "author": "Marco Kellershoff <marco@aufem.co>",
+      "filepath": "./_tmp_portal.scss",
+      "contents": [
+        "./src/style/__theme-gofeminin.scss",
+        "./_tmp_generic.scss"
+      ],
+      "callbacks": [
+        {
+          "command": "sass",
+          "args": "-q ./_tmp_portal.scss:./dist/wewomen.ca/style/main.css"
+        },
+        {
+          "comment": "Copies shared files",
+          "command": "cp",
+          "args": "-pr ./src/share/* ./dist/wewomen.ca/"
+        }
+      ]
+    },
+    {
+      "id": "js",
       "comment": "wewomen.us language and config",
       "filepath": "./dist/wewomen.us/js/app.js",
       "contents": [
@@ -187,7 +386,25 @@
     },
     {
       "id": "js",
-      "author": "Marco Kellershoff <marco@aufem.co>",
+      "filepath": "./_tmp_portal.scss",
+      "contents": [
+        "./src/style/__theme-gofeminin.scss",
+        "./_tmp_generic.scss"
+      ],
+      "callbacks": [
+        {
+          "command": "sass",
+          "args": "-q ./_tmp_portal.scss:./dist/wewomen.us/style/main.css"
+        },
+        {
+          "comment": "Copies shared files",
+          "command": "cp",
+          "args": "-pr ./src/share/* ./dist/wewomen.us/"
+        }
+      ]
+    },
+    {
+      "id": "js",
       "comment": "bildderfrau.de language and config",
       "filepath": "./dist/bildderfrau.de/js/app.js",
       "contents": [
@@ -202,156 +419,6 @@
     },
     {
       "id": "js",
-      "author": "Marco Kellershoff <marco@aufem.co>",
-      "comment": "gofeminin.de language and config",
-      "filepath": "./dist/gofeminin.de/js/app.js",
-      "contents": [
-        "./_tmp_app.js",
-        "./src/_initLanguage_Start.js",
-        "./src/text/de.js",
-        "./src/_initLanguage_End.js",
-        "./src/_initConfig_Start.js",
-        "./src/config/gofeminin.de.js",
-        "./src/_initConfig_End.js"
-      ]
-    },
-    {
-      "id": "files",
-      "author": "Marco Kellershoff <marco@aufem.co>",
-      "comment": "Copies shared files",
-      "callbacks": [
-        {
-          "command": "cp",
-          "args": "-pr ./src/share/* ./dist/wewomen.us/"
-        }
-      ]
-    },{
-      "id": "files",
-      "author": "Marco Kellershoff <marco@aufem.co>",
-      "comment": "Copies shared files",
-      "callbacks": [
-        {
-          "command": "cp",
-          "args": "-pr ./src/share/* ./dist/wewomen.ca/"
-        }
-      ]
-    },{
-      "id": "files",
-      "author": "Marco Kellershoff <marco@aufem.co>",
-      "comment": "Copies shared files",
-      "callbacks": [
-        {
-          "command": "cp",
-          "args": "-pr ./src/share/* ./dist/wewomen.be/"
-        }
-      ]
-    },{
-      "id": "files",
-      "author": "Marco Kellershoff <marco@aufem.co>",
-      "comment": "Copies shared files",
-      "callbacks": [
-        {
-          "command": "cp",
-          "args": "-pr ./src/share/* ./dist/taofemenino.com.br/"
-        }
-      ]
-    },{
-      "id": "files",
-      "author": "Marco Kellershoff <marco@aufem.co>",
-      "comment": "Copies shared files",
-      "callbacks": [
-        {
-          "command": "cp",
-          "args": "-pr ./src/share/* ./dist/sofeminine.co.uk/"
-        }
-      ]
-    },{
-      "id": "files",
-      "author": "Marco Kellershoff <marco@aufem.co>",
-      "comment": "Copies shared files",
-      "callbacks": [
-        {
-          "command": "cp",
-          "args": "-pr ./src/share/* ./dist/ofeminin.pl/"
-        }
-      ]
-    },{
-      "id": "files",
-      "author": "Marco Kellershoff <marco@aufem.co>",
-      "comment": "Copies shared files",
-      "callbacks": [
-        {
-          "command": "cp",
-          "args": "-pr ./src/share/* ./dist/enfeminino.com/"
-        }
-      ]
-    },{
-      "id": "files",
-      "author": "Marco Kellershoff <marco@aufem.co>",
-      "comment": "Copies shared files",
-      "callbacks": [
-        {
-          "command": "cp",
-          "args": "-pr ./src/share/* ./dist/aufeminin.com/"
-        }
-      ]
-    },{
-      "id": "files",
-      "author": "Marco Kellershoff <marco@aufem.co>",
-      "comment": "Copies shared files",
-      "callbacks": [
-        {
-          "command": "cp",
-          "args": "-pr ./src/share/* ./dist/alfemminile.com/"
-        }
-      ]
-    },{
-      "id": "files",
-      "author": "Marco Kellershoff <marco@aufem.co>",
-      "comment": "Copies shared files",
-      "callbacks": [
-        {
-          "command": "cp",
-          "args": "-pr ./src/share/* ./dist/onmeda.de/"
-        }
-      ]
-    },
-    {
-      "id": "files",
-      "author": "Marco Kellershoff <marco@aufem.co>",
-      "comment": "Copies shared files",
-      "callbacks": [
-        {
-          "command": "cp",
-          "args": "-pr ./src/share/* ./dist/gofeminin.de/"
-        }
-      ]
-    },
-    {
-      "id": "files",
-      "author": "Marco Kellershoff <marco@aufem.co>",
-      "comment": "Copies shared files",
-      "callbacks": [
-        {
-          "command": "cp",
-          "args": "-pr ./src/share/* ./dist/bildderfrau.de/"
-        }
-      ]
-    },
-    {
-      "id": "sass",
-      "author": "Marco Kellershoff <marco@aufem.co>",
-      "comment": "Combine to one generic style",
-      "filepath": "./_tmp_generic.scss",
-      "contents": [
-        "./src/style/helpers.scss",
-        "./src/style/main.scss"
-      ]
-    },
-    {
-      "id": "sass",
-      "author": "Marco Kellershoff <marco@aufem.co>",
-      "comment": "Prepend gofeminin.de theme variable to scss file",
       "filepath": "./_tmp_portal.scss",
       "contents": [
         "./src/style/__theme-gofeminin.scss",
@@ -363,58 +430,15 @@
           "args": "-q ./_tmp_portal.scss:./dist/gofeminin.de/style/main.css"
         },
         {
-          "comment": "Purging temp file",
-          "command": "rm",
-          "args": "./_tmp_portal.scss"
-        }
-      ]
-    },
-    {
-      "id": "sass",
-      "author": "Marco Kellershoff <marco@aufem.co>",
-      "comment": "Prepend onmeda.de theme variable to scss file",
-      "filepath": "./_tmp_portal.scss",
-      "contents": [
-        "./src/style/__theme-onmeda.scss",
-        "./_tmp_generic.scss"
-      ],
-      "callbacks": [
-        {
-          "command": "sass",
-          "args": "-q ./_tmp_portal.scss:./dist/onmeda.de/style/main.css"
-        },
-        {
-          "comment": "Purging temp files",
-          "command": "rm",
-          "args": "./_tmp_portal.scss"
-        }
-      ]
-    },
-    {
-      "id": "sass",
-      "author": "Marco Kellershoff <marco@aufem.co>",
-      "comment": "Prepend bildderfrau.de theme variable to scss file",
-      "filepath": "./_tmp_portal.scss",
-      "contents": [
-        "./src/style/__theme-bdf.scss",
-        "./_tmp_generic.scss"
-      ],
-      "callbacks": [
-        {
-          "command": "sass",
-          "args": "-q ./_tmp_portal.scss:./dist/bildderfrau.de/style/main.css"
-        },
-        {
-          "comment": "Purging temp files",
-          "command": "rm",
-          "args": "./_tmp_portal.scss"
+          "comment": "Copies shared files",
+          "command": "cp",
+          "args": "-pr ./src/share/* ./dist/gofeminin.de/"
         }
       ]
     },
     {
       "id": "purge",
       "watcherOnly": false,
-      "author": "Marco Kellershoff <marco@aufem.co>",
       "comment": "cleaning up temp files..",
       "callbacks": [
         {
