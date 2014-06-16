@@ -63,7 +63,7 @@ _you need to create two jobs for the new platform_.
       "callbacks": [
         {
           "command": "sass",
-          "args": "-q ./_tmp_portal.scss:./dist/gofeminin.de/style/main.css"
+          "args": "-q ./_tmp_portal.scss:./dist/aufeminin.com/style/main.css"
         },
         {
           "comment": "Copies shared files",
@@ -117,7 +117,7 @@ let's jump into it.
       "callbacks": [
         {
           "command": "sass",
-          "args": "-q ./_tmp_portal.scss:./dist/gofeminin.de/style/main.css"
+          "args": "-q ./_tmp_portal.scss:./dist/aufeminin.com/style/main.css"
         },
         {
           "comment": "Copies shared files",
