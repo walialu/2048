@@ -92,7 +92,7 @@ specific stuff. It's pretty much like templating.
         "./src/_initConfig_Start.js",
         "./src/config/aufeminin.com.js",
         "./src/_initConfig_End.js"
-      ],
+      ]
     }
 
 The `src/_initLanguage_Start.js` is just a template which needs to be included
