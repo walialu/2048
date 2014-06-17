@@ -7,13 +7,14 @@ We are utilizing [PGME](http://apps.marco.kiwi/pgme/) to automate the
 build-process and make it more robust and easy to change.
 
 This fork was originally made without the capabilities of PGME in mind and
-so the rewrite of this app does not all it's power.
-(E.g.: We use a delay (setTimeout) to init this app, because of that,
+so the rewrite of this app does not use all of it's power.
+(E.g.: We use a delay (setTimeout) to init this app,
 otherwise we would have had to rewrite way more stuff..)
 
 ## Distributions
 The `dist` folder contains all files for each platform.
-All necessary information is stored in one single app.js.
+All necessary information is stored in two files, one JavaScript- and one CSS
+file.
 
 There is _NOT one_ JavaScript file for all portals.
 Each portal has it's own JavaScript- and CSS file.
@@ -26,8 +27,8 @@ Each portal has it's own JavaScript- and CSS file.
     * The values should be self-explanatory
 * Create a new language file in `src/text` or use an existing one
     * It should conform either to the 2-letter country code,
-      or to something `en-netmums.com.js` if you want to have a separate
-      language file for netmums.com
+      or to something like `en-netmums.com.js` e.g. if you want to have a
+      separate language file for netmums.com
 * Edit the buildfile which defaults to `pgmefile.js`
 
 ## Editing the buildfile (pgmefile.js)
@@ -74,7 +75,7 @@ _you need to create two jobs for the new platform_.
     }
 
 There are two jobs which define how to *compile* a new distribution.
-Don't get scared, it's pretty easy, once you get used to it.
+Don't get scared; it's pretty easy, once you get used to it.
 
 The first job tells PGME to take the generic `_tmp_app.js` (which consists of
 all shared functions and libraries) and prepend it to all the other platform
@@ -104,8 +105,8 @@ your choice.
 You also need to change the value of `src/config/aufeminin.com.js` to the
 matching config file you created earlier.
 
-The second job does a shitload of stuff for us, but even this is dead simple,
-let's jump into it.
+The second job does a shitload of stuff for us, but even this is dead simple.
+Let's jump right into it.
 
     {
       "id": "js",
@@ -129,7 +130,7 @@ let's jump into it.
 
 It says, take the `src/style/__theme-gofeminin.scss` SASS file and prepend it
 to the generic `_tmp_generic.scss` SASS file
-(which automatically created earlier).
+(which has been created earlier, automatically).
 
 This is just so the first _callback_ of this job has the right theme variable
 available and can compile the temporary SASS file `_tmp_portal.scss` to a CSS
