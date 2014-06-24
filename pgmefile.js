@@ -4,11 +4,11 @@
   "watchers": [
     {
       "id": "js",
-      "filepath": "./src/js/app"
+      "filepath": "./src/js"
     },
     {
       "id": "sass",
-      "filepath": "./src/sass"
+      "filepath": "./src/style"
     }
   ],
   "jobs": [
@@ -47,7 +47,7 @@
       "contents": [
         "./_tmp_app.js",
         "./src/_initLanguage_Start.js",
-        "./src/text/de.js",
+        "./src/text/onmeda.js",
         "./src/_initLanguage_End.js",
         "./src/_initConfig_Start.js",
         "./src/config/onmeda.de.js",
@@ -70,6 +70,39 @@
           "comment": "Copies shared files",
           "command": "cp",
           "args": "-r ./src/share/* ./dist/onmeda.de/"
+        }
+      ]
+    },
+    {
+      "id": "js",
+      "comment": "onmeda.es language and config",
+      "filepath": "./dist/onmeda.es/js/app.js",
+      "contents": [
+        "./_tmp_app.js",
+        "./src/_initLanguage_Start.js",
+        "./src/text/es.js",
+        "./src/_initLanguage_End.js",
+        "./src/_initConfig_Start.js",
+        "./src/config/onmeda.es.js",
+        "./src/_initConfig_End.js"
+      ]
+    },
+    {
+      "id": "js",
+      "filepath": "./_tmp_portal.scss",
+      "contents": [
+        "./src/style/__theme-onmeda.scss",
+        "./_tmp_generic.scss"
+      ],
+      "callbacks": [
+        {
+          "command": "sass",
+          "args": "-q ./_tmp_portal.scss:./dist/onmeda.es/style/main.css"
+        },
+        {
+          "comment": "Copies shared files",
+          "command": "cp",
+          "args": "-r ./src/share/* ./dist/onmeda.es/"
         }
       ]
     },
